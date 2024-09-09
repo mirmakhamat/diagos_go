@@ -18,6 +18,32 @@ func main() {
 				Aliases: []string{"s"},
 				Usage:   "options for task status",
 				Action:  services.Status,
+				Flags: []cli.Flag{
+					&cli.BoolFlag{
+						Name:  "all",
+						Usage: "display all information",
+					},
+					&cli.BoolFlag{
+						Name:  "memory",
+						Usage: "display memory information",
+					},
+					&cli.BoolFlag{
+						Name:  "cpu",
+						Usage: "display CPU information",
+					},
+					&cli.BoolFlag{
+						Name:  "gpu",
+						Usage: "display GPI information",
+					},
+					&cli.BoolFlag{
+						Name:  "storage",
+						Usage: "display storage information",
+					},
+					&cli.BoolFlag{
+						Name:  "platform",
+						Usage: "display platform information",
+					},
+				},
 			},
 			{
 				Name:    "cpu",
